@@ -4,6 +4,12 @@ import { Routes, Route, Link } from 'react-router-dom'
 import TaskList from './components/TaskList'
 import TaskForm from './components/TaskForm'
 
+import Header from './layouts/header'
+
+import Home from './pages/Home'
+import Completed from './pages/Completed'
+import About from './pages/About'
+
 function App() {
   const [tasks, setTasks] = useState([]);
 
@@ -28,9 +34,21 @@ function App() {
 
   return (
     <>
-      <h1>Do React</h1>
+      <Header>
+        <nav>
+          <Link to="/">Home</Link>
+          <Link to="/completed">Completed</Link>
+          <Link to="/about">About</Link>
+        </nav>
+      </Header>
 
-      <nav>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/completed" element={<Completed/>}/>
+        <Route path="/about" element={<About/>}/>
+      </Routes>
+
+      {/* <nav>
         <Link to="/">Tasks</Link> |{" "}
         <Link to="/form">Form</Link>
       </nav>
@@ -42,7 +60,7 @@ function App() {
         <Route path="/form" element={
           <TaskForm addTask={addTask} />
         } />
-      </Routes>
+      </Routes> */}
     </>
   )
 }

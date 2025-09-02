@@ -19,7 +19,7 @@ function TaskList({tasks, markAsDone, deleteTask}) {
               <td>{task.name}</td>
               <td>{task.description}</td>
               <td><button onClick={() => markAsDone(task.id)} className="button" disabled={task.isDone}>Done</button></td>
-              <td><button onClick={() => deleteTask(task.id)} className="button" disabled={task.isDone}>Delete</button></td>
+              <td><button onClick={() => deleteTask(task.id)} className="button">Delete</button></td>
             </tr>
           ))}
         </tbody>
