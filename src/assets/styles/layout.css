@@ -1,0 +1,45 @@
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #fff;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  gap: 8px;
+}
+
+.header-content .logo {
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.header-content nav {
+  display: flex;
+  align-items: bottom;
+  gap: 12px;
+}
+
+.header-content nav a:not(:last-child) {
+  border-right: 1px solid #fff;
+  padding-right: 12px;
+}
+
+.header-content nav a {
+  font-weight: 400;
+}
+
+.header-content nav a.active {
+  font-weight: bold;
+}
+
+.page-container {
+  width: 100%;
+  margin: 12px auto;
+  max-width: 1280px;
+}
