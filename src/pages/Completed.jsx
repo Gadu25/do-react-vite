@@ -1,7 +1,16 @@
-function Completed() {
+import TaskList from "../components/TaskList";
+
+function Completed({tasks, deleteTask, addTask, markAsDone}) {
   return (
     <>
-      <h1>This is completed</h1>
+      <div className="completed-content">
+        <TaskList 
+          tasks={tasks.filter((task) => task.isDone===true)}
+          deleteTask={deleteTask}
+          addTask={addTask}
+          markAsDone={markAsDone}
+        />
+      </div>
     </>
   )
 }
