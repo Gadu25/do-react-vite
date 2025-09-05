@@ -1,9 +1,9 @@
 import { TrashIcon } from '@heroicons/react/24/solid'
 
-function TaskCard({task, index, markAsDone, deleteTask}) {
+function TaskCard({task, markAsDone, deleteTask, onClick}) {
   return (
     <>
-      <div key={index} className={`task ${task.isDone ? 'done': ''}`}>
+      <div className={`task ${task.isDone ? 'done': ''}`} onClick={onClick}>
         <div className="task-main">
           <div className="task-head">
             <input type="checkbox" className="task-checkbox" checked={task.isDone} onChange={(e) => markAsDone(e, task.id)}></input>

@@ -4,6 +4,7 @@ import Header from './layouts/header'
 import Home from './pages/Home'
 import Completed from './pages/Completed'
 import About from './pages/About'
+import TaskDetails from './pages/TaskDetails'
 
 function App() {
   // props drill for the meantime - will update to redux
@@ -52,6 +53,10 @@ function App() {
             markAsDone={markAsDone} 
           />}/>
           <Route path="/about" element={<About/>}/>
+          <Route path="/task-details/:id" element={<TaskDetails
+            tasks={tasks}         
+          />}
+          />
         </Routes>
       </div>
     </>
